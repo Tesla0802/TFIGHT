@@ -13,11 +13,19 @@ class Sprite{
         this.position = position
         this.velocity = velocity
         this.height = 150
-        this.lastKey 
+        this.lastKey
+        this.attackBox = {
+          position: this.position,
+          width: 100,
+          height: 50,
+        }
     }
     draw(){
         c.fillStyle = '#ff0000'
         c.fillRect(this.position.x, this.position.y, 50, this.height)
+
+        //attack box
+        c.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height)
     }
 
     update() {
