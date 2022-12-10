@@ -86,11 +86,17 @@ const keys = {
     d: {
         pressed: false
     },
+    w: {
+      pressed: false
+    },
     ArrowRight: {
         pressed: false
     },
     ArrowLeft: {
         pressed: false
+    },
+    ArrowUp: {
+      pressed: false
     }
 }
 
