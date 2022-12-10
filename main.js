@@ -123,6 +123,7 @@ function animate(){
       && player.attackBox.position.y <= enemy.position.y + enemy.height
       && player.isAttacking
       ) {
+      player.isAttacking
       console.log('go')
       }
 }
