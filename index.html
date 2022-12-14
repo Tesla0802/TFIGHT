@@ -5,9 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TFIGHT</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <canvas></canvas>
+    <div class="red-container">
+      <div class="smaller-red-container">
+        <div class="player">
+          <div class="player-health"></div>
+          <div class="player-hp" id="playerHealth"></div>
+        </div>
+        <div class="timer"></div>
+        <div class="enemy">
+          <div class="enemy-health"></div>
+          <div class="enemy-hp" id="enemyHealth"></div>
+        </div>
+        <div></div>
+      </div>
+      <canvas></canvas>
+    </div>
 
     <script src="./main.js"></script>
   </body>
