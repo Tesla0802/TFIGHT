@@ -13,7 +13,7 @@ const background = new Sprite({
     x: 0,
     y: 0
   },
-  imageSrc: './img/forest.gif'
+  imageSrc: './img/background/background_layer_1.png'
 })
 
 const player = new Fighter({
