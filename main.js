@@ -8,6 +8,14 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 
 const gravity = 0.7
 
+const background = new Sprite({
+  position:{
+    x: 0,
+    y: 0
+  },
+  imageSrc: './img/forest.gif'
+})
+
 const player = new Fighter({
     position: {
     x: 0,
@@ -102,26 +110,27 @@ function animate(){
     window.requestAnimationFrame(animate)
     c.fillStyle = '#000000'
     c.fillRect(0, 0, canvas.width, canvas.height)
+    background.update()
     player.update()
     enemy.update()
 
     player.velocity.x = 0
     enemy.velocity.x = 0
 
-    // player movement
+    // ? player movement
     if(keys.a.pressed && player.lastKey === 'a'){
         player.velocity.x = -5
     }else if (keys.d.pressed && player.lastKey === 'd'){
         player.velocity.x = 5
     }
-    // enemy movement
+    // ! enemy movement
     if(keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft'){
         enemy.velocity.x = -5
     }else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight'){
         enemy.velocity.x = 5
     }
   
-    //detect for collision
+    // * detect for collision
     if(rectangularCollision ({
       rectangle1: player,
       rectangle2: enemy

@@ -1,12 +1,14 @@
 class Sprite{
-    constructor({position}) {
+    constructor({position, imageSrc}) {
         this.position = position
         this.width = 50
         this.height = 150
+        this.image = new Image()
+        this.image.src = imageSrc
   
     }
     draw(){
-  
+      c.drawImage(this.image, this.position, this.position.y)
     }
   
     update() {
@@ -39,7 +41,7 @@ class Sprite{
           c.fillStyle = this.color
           c.fillRect(this.position.x, this.position.y, this.width, this.height)
   
-          //attack box
+          // ! attack box
           if(this.isAttacking) {
           c.fillStyle = '#008000'
           c.fillRect(
